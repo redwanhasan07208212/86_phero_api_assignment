@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section class="container mx-auto mt-16">
+        <div class="text-wrap text-justify">
+            <h1 class="text-red-600 text-3xl font-bold">1. Discuss the scope of var, let, and const</h1>
+            <h1>Var:</h1>
+            <p>
+                Scope:
+                var is function-scoped or globally-scoped if declared outside any function. This means that a var
+                variable
+                is
+                available throughout the function in which it is declared or globally if declared outside any function.
+                var does not have block scope (i.e., it is not limited to {} blocks like loops or conditionals).
+                <br>
+                Hoisting:
+                Variables declared with var are hoisted to the top of their scope, meaning the declaration is moved to
+                the
+                top
+                during the compile phase. However, the initialization remains at the original line. This means they can
+                be
+                accessed before they are declared, but their value will be undefined until the initialization line is
+                executed.
+                <br>
+                Re-declaration:
+                Variables declared with var can be re-declared within the same scope without causing an error.
+            </p>
+        </div>
+        <div>
+            <h1>Let:</h1>
+            <p>
+                Scope:
+                let is block-scoped, meaning it is limited to the block, statement, or expression where it is used. It
+                cannot be accessed outside the block in which it is declared. <br>
+                Hoisting:
+                Variables declared with let are hoisted to the top of their block, but they are not initialized. This
+                means they cannot be used before the declaration line within the block (Temporal Dead Zone). <br>
+                Re-declaration:
+                Variables declared with let cannot be re-declared within the same scope. However, they can be declared
+                in different blocks.</p>
+        </div>
+        <div>
+            <h1>Const:</h1>
+            <p>
+                Scope:
+                const is block-scoped, similar to let. It cannot be accessed outside the block in which it is declared.
+                <br>
+                Hoisting:
+                Variables declared with const are hoisted to the top of their block but are not initialized. They also
+                have a Temporal Dead Zone, similar to let. <br>
+                Re-declaration and Re-assignment:
+                Variables declared with const cannot be re-declared within the same scope.
+                They cannot be re-assigned after their initial assignment. However, if the variable is an object or
+                array, the properties or elements of the object/array can be modified.
+            </p>
+        </div>
+    </section>
+    <section class="container mx-auto mt-16">
+        <h1 class="text-red-600 text-3xl font-bold">2. Tell us the use cases of null and undefined</h1>
+        <h1>Undefined:</h1>
+        <p>undefined is a primitive value that is automatically assigned to variables that have been declared but not
+            yet assigned a value. It indicates the absence of a value at the moment of declaration.</p>
+        <h1>Null:</h1>
+        <p>null is a primitive value that represents the intentional absence of any object value. It is often used to
+            indicate that a variable should have no value.</p>
+    </section>
+
+
+    <section class="container mx-auto mt-16">
+        <h1 class="text-red-600 text-3xl font-bold">3.What do you mean by REST API?</h1>
+        <p>A REST API (Representational State Transfer Application Programming Interface) is a set of rules and
+            conventions for building and interacting with web services. It relies on standard HTTP methods and
+            principles to enable communication between a client and a server. REST APIs are designed to be stateless and
+            to provide a way to create, read, update, and delete resources on a web server. <br>
+
+            Key Principles of REST: 
+            <br>
+            Stateless:
+            Each request from a client to a server must contain all the information needed to understand and process the
+            request. The server does not store any client context between requests, making each request independent. <br>
+            Client-Server Architecture:
+            The client and server are separate entities that interact over a network. This separation of concerns allows
+            for the development and scaling of each part independently. <br>
+            Uniform Interface:
+
+            REST APIs have a consistent and standard way of interacting with resources, typically through URIs (Uniform
+            Resource Identifiers) and standard HTTP methods (GET, POST, PUT, DELETE, PATCH). <br>
+            Resource-Based:
+
+            The focus of a REST API is on resources, which are identified by URIs. Each resource can have multiple
+            representations, such as JSON, XML, or HTML. <br>
+            Stateless Communication:
+
+            Each request from the client to the server must contain all the information needed to understand and process
+            the request. The server should not store any state between requests. <br>
+            Cacheable:
+
+            Responses from the server should be explicitly marked as cacheable or non-cacheable, to improve performance
+            and scalability.</p>
+    </section>
+</body>
+
+</html>
